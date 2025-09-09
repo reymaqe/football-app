@@ -1,13 +1,13 @@
 {
   "functions": {
-    "backend/vercel-api.ts": {
-      "maxDuration": 10
+    "api/index.ts": {
+      "runtime": "nodejs20.x"
     }
   },
   "rewrites": [
     {
-      "source": "/api/:path*",
-      "destination": "/backend/vercel-api"
+      "source": "/api/(.*)",
+      "destination": "/api/index.ts"
     }
   ]
 }
